@@ -23,26 +23,59 @@ var cards = [
 	cardImage: "images/king-of-diamonds.png",
 }
 ]
-var cardsInPlay = [];
+cardsInPlay = [];
 var checkForMatch = function () {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
-		console.log("You found a match!");
+		alert("You found a match!");
 	} else {
-		console.log("Sorry, try again.");
+		alert("Sorry, try again.");
 	}
 }
 
 var flipCard = function (cardId) {
-	cardsInPlay.push(cards[cardId].rank);
+	var cardID = this.getAttribute("data-id");
 	console.log("User flipped " + cards[cardId].rank);
-	if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
+	cardsInPlay.push(cards[cardId].rank);
+	console.log(cards[cardId].suit);
+	console.log(cards[cardId].cardImage);
+	this.setAttribute("src", cards[cardID].cardImage);
+	/* if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
 		alert('You found a match!');
 	} else {
 		alert('Sorry, try again.');
-		console.log(cards[cardId].cardImage);
-		console.log(cards[cardId].suit);
+		*/
+	if(cardsInPlay.length ===2) {
+		checkForMatch();
 	}
 };
+
+// Unit 11 Instruction -->
+
+/*
+var startOver = document.createElement("input");
+startOver.setAttribute("type", "button");
+startOver.setAttriute("onclick", "reset()");
+startOver.setAttribute("value", "Reset");
+document.getELementById("game-board").appendChild(startOver);
+var reset = function() {
+	for(var i = cardsInPlay.length; i > 0; i--) {
+		cardsInPlay.pop();
+	}
+};
+*/
+
+var createBoard = function() {
+	for (var i = 0; i < cards.length; i+=1) {
+		var cardElement = document.createElement('img');
+		cardElement.setAttribute('src', "images/back.png");
+		cardElement.setAttribute('data-id', i);
+		cardElement.addEventListener('click', flipCard);
+		document.getElementById("game-board").appendChild(cardElement);
+	}
+};
+
+createBoard();
+/*
 flipCard(0);
 flipCard(2);
-
+*/
