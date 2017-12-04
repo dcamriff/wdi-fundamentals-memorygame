@@ -2,11 +2,19 @@
 <html>
 <head>
 	<title>Memory Card Game</title>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700">
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700"> -->
 
 </head>
 <body>
+	<div class="container">
 	<header>
 	<h1>Memory Game</h1>
 	</header>
@@ -16,18 +24,22 @@
 	<a href="#">Game</a>
 	</nav>
 
-	<main>
+	<div class="row">
 	<h2>Instructions</h2>
 	<p>Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped up over each turn. The object of the game is to turn over pairs of matching cards.</p>
 
 	<div id="game-board" class="board clearfix"></div>
 	
-	</main>
+</div>
 
 	<footer class="clearfix">
 		<p class="copyright">Copyright 2017</p>
 		<p class="message">created with &hearts; by <span class="name">GA</span></p>
 	</footer>
 	<script src="js/main.js"></script>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+</div>
 </body>
 </html>

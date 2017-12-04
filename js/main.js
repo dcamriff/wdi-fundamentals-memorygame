@@ -19,7 +19,7 @@ var cards = [
 },
 {
 	rank: "king",
-	suit: "diamnds",
+	suit: "diamonds",
 	cardImage: "images/king-of-diamonds.png",
 }
 ]
