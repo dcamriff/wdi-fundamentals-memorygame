@@ -4,7 +4,7 @@ body {
 	margin: 0;
 }
 header {
-	background-color: #F15B31;
+	background-color: #ffcc80;
 	color: #FFFFFF;
 	padding: 30px 20px;
 }
@@ -18,7 +18,7 @@ a:hover {
 	border: white;
 }
 h1 {
-	font-family: "Raleway", sans-serif;
+	font-family: "Robot", sans-serif;
 	color: #0D2C40;
 	letter-spacing: 1px;
 	font-weight: 400;
@@ -26,7 +26,7 @@ h1 {
 	margin: 0;
 }
 a {
-	font-family: "Raleway", sans-serif;
+	font-family: "Robot", sans-serif;
 	color: #F15B31;
 	letter-spacing: 1px;
 	font-weight: 600;
@@ -35,7 +35,7 @@ a {
 	margin: 0px 20px;
 }
 h2 {
-	font-family: "Raleway", sans-serif;
+	font-family: "Robot", sans-serif;
 	color: #0D2C40;
 	letter-spacing: 1px;
 	font-weight: 600;
@@ -64,20 +64,20 @@ footer {
 	font-weight: 500;
 }
 .copyright {
-	font-family: "Raleway", sans-serif;
+	font-family: "Robot", sans-serif;
 	float: left;
 }
 .message {
-	font-family: "Raleway", sans-serif;
+	font-family: "Robot", sans-serif;
 	float: right;
 }
-.clearfix:after {
+/* .clearfix:after {
 	visibility: hidden;
 	display: block;
 	content: " ";
 	clear: both;
 	height: 0;
-	font-size: 0;
+	font-size: 0; */
 }
 .name {
 	color: #F15B31;

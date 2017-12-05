@@ -22,60 +22,61 @@ var cards = [
 	suit: "diamonds",
 	cardImage: "images/king-of-diamonds.png",
 }
-]
-cardsInPlay = [];
-var checkForMatch = function () {
-	if (cardsInPlay[0] === cardsInPlay[1]) {
+];
+
+// card storage
+var cardsInPlay = [];
+var checkForMatch = function() {
+	if (cardsInPlay[0] === cardsInPlay [1]) {
+	// if (cardsInPlay.length === 2) {
+	// if (cardsInPlay[0].rank === cardsInPlay[1].rank && cardsInPlay[1].suit) {
 		alert("You found a match!");
 	} else {
 		alert("Sorry, try again.");
 	}
-}
+	// }cardsInPlay(0)
+};
 
-var flipCard = function (cardId) {
-	var cardID = this.getAttribute("data-id");
+// this restarts game
+var flipCard = function () {
+	var cardId = this.getAttribute("data-id");
 	console.log("User flipped " + cards[cardId].rank);
 	cardsInPlay.push(cards[cardId].rank);
 	console.log(cards[cardId].suit);
 	console.log(cards[cardId].cardImage);
-	this.setAttribute("src", cards[cardID].cardImage);
-	/* if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
+	this.setAttribute("src", cards[cardId].cardImage);
+	/*if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]) {
 		alert('You found a match!');
 	} else {
 		alert('Sorry, try again.');
 		*/
-	if(cardsInPlay.length ===2) {
+	if(cardsInPlay.length === 2) {
 		checkForMatch();
 	}
 };
 
-// Unit 11 Instruction -->
-
-/*
-var startOver = document.createElement("input");
-startOver.setAttribute("type", "button");
-startOver.setAttriute("onclick", "reset()");
-startOver.setAttribute("value", "Reset");
-document.getELementById("game-board").appendChild(startOver);
-var reset = function() {
-	for(var i = cardsInPlay.length; i > 0; i--) {
-		cardsInPlay.pop();
-	}
-};
-*/
 
 var createBoard = function() {
-	for (var i = 0; i < cards.length; i+=1) {
-		var cardElement = document.createElement('img');
-		cardElement.setAttribute('src', "images/back.png");
-		cardElement.setAttribute('data-id', i);
-		cardElement.addEventListener('click', flipCard);
+	for (var i = 0; i < cards.length; i++) {
+		var cardElement = document.createElement("img");
+		cardElement.setAttribute("src", "images/back.png");
+		cardElement.setAttribute("data-id", i);
+		cardElement.addEventListener("click", flipCard);
 		document.getElementById("game-board").appendChild(cardElement);
 	}
 };
-
 createBoard();
-/*
-flipCard(0);
-flipCard(2);
-*/
+
+// Unit 11 Instruction -->
+
+// var startOver = document.createElement("input");
+// startOver.setAttribute("type", "button");
+// startOver.setAttriute("click", "reset()");
+// startOver.setAttribute("value", "Reset");
+// document.getELementById("game-board").appendChild(startOver);
+// var reset = function() {
+// 	for(var i = cardsInPlay.length; i > 0; i--) {
+// 		cardsInPlay.pop();
+// 	}
+// };
+// startOver();
